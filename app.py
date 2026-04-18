@@ -6,7 +6,7 @@ st.set_page_config(page_title="College Data Explorer", layout="wide")
 st.title("College Data Extraction & Analysis")
 
 # Upload file
-uploaded_file = st.file_uploader("Upload CSV File", type=["csv"])
+uploaded_file = st.file_uploader("Upload PDF File", type=["PDF"])
 
 if uploaded_file is not None:
     df = pd.read_csv(uploaded_file)
