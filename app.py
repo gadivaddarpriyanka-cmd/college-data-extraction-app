@@ -67,14 +67,14 @@ if uploaded_file is not None:
     st.dataframe(filtered_df)
 
     # Download filtered data
-    csv = filtered_df.to_csv(index=False).encode('utf-8')
+    csv = filtered_df.to_pdf(index=False).encode('utf-8')
 
     st.download_button(
-        label=" Download Filtered CSV",
-        data=csv,
-        file_name="filtered_colleges.csv",
-        mime="text/csv"
+        label=" Download Filtered PDF",
+        data=pdf,
+        file_name="filtered_colleges.pdf",
+        mime="text/pdf"
     )
 
 else:
-    st.info("👆 Please upload a CSV file to start")
+    st.info("👆 Please upload a PDF file to start")
